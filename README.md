@@ -13,6 +13,11 @@ The recipient will receive a link to a zip file he can download
 Boom. Thats it. 
 
 
+Screen Shot
+===========
+
+![Senderella](http://download.newyorkbrass.com/images/senderella.png "Senderella")
+
 Configuration
 =============
 
