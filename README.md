@@ -27,6 +27,8 @@ Set the admin username and password ( this is a very basic system as it is inted
 and your email. other than that everything should more or less work. 
 Point your browser at www.yoursite.com/admin and send away!!
 
+Currently only works on linux if you need a windows version, feel free to fork the repo and add the functionality.
+
 Notes
 =====
 
