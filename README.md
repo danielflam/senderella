@@ -1,9 +1,38 @@
-Ever used DropBox, Sendspace, or any other file drop service?
+Senderella
+==========
 
-This project will allow you to have a similar ability to send lots of large files directly from your server
+Ever used DropBox, Sendspace, or any other file drop service, and wish you could have something on your server?
 
-You drop your files onto the form, add a recipient email, description, and subject line hit send. 
-Thats it. 
+This project will allow you to have a similar ability to send lots of (large) files directly from your server.
+It has saved me countless of hours and dollars and hopefully will help you too. I have sent gigs of files using this
+script.  
 
-Of course some configuration will be needed :) 
+You drop your files onto the form, add a recipient email, description, and subject line hit send.
+The recipient will receive a link to a zip file he can download
+ 
+Boom. Thats it. 
+
+
+Configuration
+=============
+
+If you unzip in a folder and apply the proper file permissions - there is very little to configure.
+Copy the "config-initial.php" to "config.php" and edit the file.
+Set the admin username and password ( this is a very basic system as it is inteded for personal use ) 
+and your email. other than that everything should more or less work. 
+Point your browser at www.yoursite.com/admin and send away!!
+
+Notes
+=====
+
+Large files : If you cannot upload large files - look at the php and server configurations.
+
+Limitations 
+===========
+The program is single session - so you can't open multiple browser windows and prepare multiple drops.
+*However* it allows you to close the window and return to your work in progress, hence the "reset" button. 
+  
+
+
+ 
 

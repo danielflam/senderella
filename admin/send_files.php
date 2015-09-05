@@ -52,7 +52,7 @@ if ($validfiles) {
 
 <?php
 	
-	$subject = SUBJECT_MESSAGE . " " . truncate ( trim ( $_REQUEST ["subject"] ), 50, "..." );
+	$subject = SUBJECT_PREFIX . " " . truncate ( trim ( $_REQUEST ["subject"] ), 50, "..." );
 	$to = trim ( $_REQUEST ['email'] );
 	
 	$external_link = EXTERNAL_LINK;
@@ -70,12 +70,23 @@ if ($validfiles) {
 	{font-family:Calibri;
 	panose-1:2 15 5 2 2 2 4 3 2 4;}
  /* Style Definitions */
+ p.MsoBold, li.MsoBold, div.MsoBold
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	font-weight: bold;}
  p.MsoNormal, li.MsoNormal, div.MsoNormal
 	{margin:0in;
 	margin-bottom:.0001pt;
 	font-size:11.0pt;
 	font-family:"Calibri","sans-serif";}
-a:link, span.MsoHyperlink
+ p.MsoLarger,li.MsoLarger, div.MsoLarger
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:13.0pt;
+	font-family:"Calibri","sans-serif";}
+	a:link, span.MsoHyperlink
 	{mso-style-priority:99;
 	color:blue;
 	text-decoration:underline;}
@@ -113,13 +124,18 @@ div.Section1
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
 <p class=MsoNormal>Your files(s) are ready to download. You can get them here: </p>
-<p><a href="{$external_link}{$storeFolderName}.zip">{$external_link}{$storeFolderName}.zip</a></p>
+<p><a href="{$external_link}/{$storeFolderName}.zip">{$external_link}/{$storeFolderName}.zip</a></p>
 
- <p class=MsoNormal>Notes:</p>
- <p class=MsoNormal>{$_REQUEST['desc']}</p>
+<br/>
+ <p class=MsoBold>NOTES:</p>
+ 
+ <p class=MsoLarger><b>{$_REQUEST['desc']}</b></p>
+				
+<p>Follow Us On Twitter! <a href="https://twitter.com/NewYorkBrass" class="twitter-follow-button" 
+			data-show-count="false" data-size="large">@NewYorkBrass</a></p>
+<p>Sent using <a href="https://github.com/danielflam/senderella" class="twitter-follow-button" 
+			data-show-count="false" data-size="large">SENDERELLA</a></p>
 			
-<a href="https://twitter.com/NewYorkBrass" class="twitter-follow-button" data-show-count="false" data-size="large">Follow Us On Twitter! @NewYorkBrass</a>
-
 </div>
 
 </body>
@@ -138,5 +154,6 @@ BODY;
 
 ?>
 
-<br/><br/>
-<a href="<?=BASEDIR?>">SEND MORE FILES</a>
+<br />
+<br />
+<a href="<?=ADMINURL?>">SEND MORE FILES</a>

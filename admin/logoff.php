@@ -25,7 +25,7 @@ $login->authorize ( 'reset_upload' ); // make user login
 ?><html>
 <body>
 	<script type="text/javascript">
-setTimeout( function(){ window.location.href = '<?=BASEDIR?>'; }  , 100 );
+setTimeout( function(){ window.location.href = '<?=ADMINURL?>'; }  , 100 );
 </script>
 </body>
 </html>

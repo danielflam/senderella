@@ -80,7 +80,7 @@ $login->authorize(); // make user login
 		</div>
 		<div class="grid_3">
 			<p> <img src="img/envelope-clipart-envelope_clip_art_16131.jpg" /> </p>
-			<p><a href="http://download.newyorkbrass.com/dropsend/logoff.php?action=clear_login">logout</a></p>
+			<p><a href="<?=ADMINURL?>/logoff.php?action=clear_login">logout</a></p>
 		</div>
 		<div class="clear"></div>
 		<form action="send_files.php">
