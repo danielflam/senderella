@@ -45,7 +45,7 @@ $login->authorize(); // make user login
 <script src="js/jquery-2.1.4.min.js"></script>
 <link rel="stylesheet" href="css/dropzone.css" />
 <link rel="stylesheet" href="css/style.css" />
-<link rel="stylesheet" href="css/960/code/css/960_12_col.css" />
+<link rel="stylesheet" href="css/960_12_col.css" />
 
 <style type="text/css">
 .logo_css {
