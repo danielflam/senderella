@@ -8,14 +8,25 @@ define('LOGIN_PASS', "secret");
 
 define('DS',  DIRECTORY_SEPARATOR); 
 
+
+// dont touch
 define('UPLOADDIR', "uploads");
 
-define ('BASEDIR', "http://download.newyorkbrass.com/dropsend/");
+// This is the admin console path (where you send files from)
+define ('BASEDIR', "http://your.site.here/senderella/");
 
-define('OUTPUTDIR',  "/var/www/download.newyorkbrass.com/filedrop");
+// This is the local path on server where the files will be 
+// stored and served
+define('OUTPUTDIR',  "/var/www/local path to web directory of filedrop");
 
-define('EXTERNAL_LINK', "http://download.newyorkbrass.com/filedrop/");
+// This is the external link to this web directory
+// It is recommended to add an empty index.html to this 
+// directory to prevent someone from listing the files
+define('EXTERNAL_LINK', "http://your.site.here/filedrop/");
 
-define('FROM_EMAIL', 'danielflam@gmail.com');
+// your email address 
+define('FROM_EMAIL', 'your.email@wherever.com');
 
-define ('SUBJECT_MESSAGE', '[NewYorkBrass.com Files Ready]');
+// This prefix will be prepended to the subject line
+define ('SUBJECT_MESSAGE', '[Files Are Ready]');
+
