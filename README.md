@@ -39,6 +39,9 @@ Limitations
 The program is single session - so you can't open multiple browser windows and prepare multiple drops.
 *However* it allows you to close the window and return to your work in progress, hence the "reset" button. 
   
+The maximum send is limited by what zip can process on the server The basic Zip format has a limit of 4 GB per file. 
+If you need larger files - You will need to upgrade your zip tool to one that supports Zip64.
+
 
 Follow me on twitter [@NewYorkBrass](https://twitter.com/NewYorkBrass) 
  
