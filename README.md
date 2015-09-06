@@ -18,6 +18,12 @@ Screen Shot
 
 ![Senderella](http://download.newyorkbrass.com/images/senderella.png "Senderella")
 
+License
+=======
+
+This software is free for *non-commercial use only* under the MIT license. 
+For commercial use, a separate commercial license MUST be acquired.  
+
 Configuration
 =============
 
@@ -33,6 +39,8 @@ Notes
 =====
 
 Large files : If you cannot upload large files - look at the php and server configurations.
+
+This project uses third party software and all copyright notices were kept in respective files.  
 
 Limitations 
 ===========
