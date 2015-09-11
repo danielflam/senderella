@@ -138,7 +138,7 @@ $login->authorize(); // make user login
 			<p
 				style="font-weight: normal; color: #000000; letter-spacing: 1pt; word-spacing: 2pt; font-size: 12px; text-align: left; font-family: arial, helvetica, sans-serif; line-height: 1;">
 				(C) 2015 <a href="http://blog.NewYorkBrass.com">NewYorkBrass.com</a>
-				- code released under GPL. Commercial license available
+				- code released under MIT license for non-commercial use. Commercial license available
 			</p>
 		</div>
 		<div class="clear"></div>
