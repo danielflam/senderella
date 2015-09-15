@@ -152,4 +152,4 @@ $login->authorize (); // make user login
 </body>
 </html><?php
 
-session_write_close ();
+session_write_close();
