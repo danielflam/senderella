@@ -1,0 +1,22 @@
+@CHARSET "ISO-8859-1";
+.logo_css {
+	font-weight: normal;
+	color: #000000;
+	letter-spacing: 3pt;
+	word-spacing: 2pt;
+	font-size: 4.6em;
+	text-align: left;
+	font-family: arial black, sans-serif;
+	line-height: 0.8;
+}
+
+.logo_css_tagline {
+	font-weight: normal;
+	color: #000000;
+	/* 	letter-spacing: 3pt; */
+	word-spacing: 2pt;
+	font-size: 2em;
+	text-align: left;
+	font-family: arial black, sans-serif;
+	line-height: 0.8;
+}
