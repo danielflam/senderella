@@ -24,6 +24,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
 
+/// TODO : BETTER FIELD VALIDATION - SECURITY HOLES AHEAD
+
+
 define ( 'SENDERELLA', true );
 
 require_once 'common.php';
@@ -55,6 +58,7 @@ session_write_close ();
 ?>
 
 <?php
+
 if ($validfiles) {
 	echo "<pre>";
 	chdir ( $storeFolder );
@@ -170,9 +174,17 @@ div.Section1
 BODY;
 	
 	echo $body;
-	$email_to = trim ( $_REQUEST ['email'] );
 	
-	mail ( $email_to, $subject, $body, "From: " . FROM_EMAIL . "\nContent-Type: text/html; charset=iso-8859-1" );
+	//$email_to = trim ( $_REQUEST ['email'] );
+	
+	$emails = explode(",", $_REQUEST['email_tags']);
+	foreach ($emails as $email)
+	{
+		error_log("emailing $email");
+		mail ( $email, $subject, $body, "From: " . FROM_EMAIL . "\nContent-Type: text/html; charset=iso-8859-1" );		
+	}
+	
+
 } else {
 	echo "Nothing to do";
 }

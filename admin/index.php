@@ -1,41 +1,47 @@
 <?php
 /*
-Copyright (c) 2015 Daniel Flam of NewYorkBrass.com
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-The software and/or its derivatives are used in a non-commercial manner.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+ * Copyright (c) 2015 Daniel Flam of NewYorkBrass.com
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * The software and/or its derivatives are used in a non-commercial manner.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
  */
-
-define ('SENDERELLA', true);
+define ( 'SENDERELLA', true );
 
 require_once 'common.php';
 
-require("Login.class.php"); // pull in file
-$login = new Login; // create object login
+require ("Login.class.php"); // pull in file
+$login = new Login (); // create object login
 
-$login->authorize(); // make user login
-
+$login->authorize (); // make user login
 
 ?>
 <html>
 <head>
+<link rel="stylesheet" href="css/dropzone.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/960_12_col.css" />
+<link rel="stylesheet" href="css/tagmanager.css" />
+<link rel="stylesheet" href="css/senderella.css" />
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/tagmanager.js"></script>
 <script src="js/dropzone.js"></script>
 <script> 		
 	Dropzone.options.myAwesomeDropzone = {
@@ -66,34 +72,9 @@ $login->authorize(); // make user login
 		  }
 		};
 </script>
-<script src="js/jquery-2.1.4.min.js"></script>
-<link rel="stylesheet" href="css/dropzone.css" />
-<link rel="stylesheet" href="css/style.css" />
-<link rel="stylesheet" href="css/960_12_col.css" />
 
-<style type="text/css">
-.logo_css {
-	font-weight: normal;
-	color: #000000;
-	letter-spacing: 3pt;
-	word-spacing: 2pt;
-	font-size: 4.6em;
-	text-align: left;
-	font-family: arial black, sans-serif;
-	line-height: 0.8;
-}
 
-.logo_css_tagline {
-	font-weight: normal;
-	color: #000000;
-	/* 	letter-spacing: 3pt; */
-	word-spacing: 2pt;
-	font-size: 2em;
-	text-align: left;
-	font-family: arial black, sans-serif;
-	line-height: 0.8;
-}
-</style>
+
 
 </head>
 <body>
@@ -103,21 +84,28 @@ $login->authorize(); // make user login
 			<p class="logo_css_tagline">Sending files made easy</p>
 		</div>
 		<div class="grid_3">
-			<p> <img src="img/envelope-clipart-envelope_clip_art_16131.jpg" /> </p>
-			<p><a href="<?=ADMINURL?>/logoff.php?action=clear_login">logout</a></p>
+			<p>
+				<img src="img/envelope-clipart-envelope_clip_art_16131.jpg" />
+			</p>
+			<p>
+				<a href="<?=ADMINURL?>/logoff.php?action=clear_login">logout</a>
+			</p>
 		</div>
 		<div class="clear"></div>
 		<form action="send_files.php">
-			<div class="grid_9">Email Address: <input type="text" name="email" style="width:100%" /></div>
+			<div class="grid_9">
+				Email Address: <input type="text" id="email" name="email"
+					style="width: 100%" class="tm-input tm-input-info tm-input-01" />
+			</div>
 			<div class="clear"></div>
 			<div class="grid_9">
-				Subject: <input type="text" name="subject" style="width:100%" />
+				Subject: <input type="text" name="subject" style="width: 100%" />
 			</div>
 			<div class="clear"></div>
 			<div class="grid_9">
 				Description:<br />
 
-				<textarea rows="4" style="width:100%" name="desc"></textarea>
+				<textarea rows="4" style="width: 100%" name="desc"></textarea>
 			</div>
 			<div class="clear"></div>
 			<div class="grid_12">
@@ -153,10 +141,15 @@ $login->authorize(); // make user login
 	  
 	    $( "#reset_files" ).on( "click", function() {
 			window.location.href="reset.php";       
-		});		    
+		});		
+	    $( "#email" ).tagsManager({
+		    hiddenTagListName: "email_tags",
+			blinkBGColor_1: '#FFFF9C',
+	        blinkBGColor_2: '#CDE69C'
+		});    
 	  });
 	</script>
 </body>
-</html><?php 
+</html><?php
 
-session_write_close();
+session_write_close ();
