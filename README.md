@@ -16,6 +16,8 @@ Boom. Thats it.
 Screen Shot
 ===========
 
+NOTE: Image shows license as GPL which is incorrect.
+
 ![Senderella](http://download.newyorkbrass.com/images/senderella.png "Senderella")
 
 License
